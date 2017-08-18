@@ -1,0 +1,26 @@
+public class Primeira{
+  
+    public static void main(String[] args){
+        int[] arranjo = new int[10];
+        try{
+	          for(int bm = 0; bm < 11; bm++){
+	              arranjo[bm] = bm;
+	              System.out.println(arranjo[bm]);
+            }
+        System.out.println("Não executa!");
+        }
+        catch(ArrayIndexOutOfBoundsException ex){
+            System.out.println("OVER");
+        }
+        Segunda seg = new Segunda();
+        System.out.println(seg.valor(arranjo, 5));
+        }
+    
+    }
+
+class Segunda{
+  
+    public int valor(int[] arranjo, int posicao)throws ArrayIndexOutOfBoundsException{
+        return arranjo[posicao];
+    }
+}
